@@ -7,6 +7,11 @@ appcompat = "1.7.1"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
+room = "2.5.2"
+lifecycle = "2.6.2"
+picasso = "2.71828"
+glide = "4.16.0"
+mail = "1.6.7"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -16,6 +21,23 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# Lifecycle
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle" }
+lifecycle-livedata  = { module = "androidx.lifecycle:lifecycle-livedata",  version.ref = "lifecycle" }
+lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version = "2.2.0" } # optional/legacy
+
+# Images
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+
+# Mail
+android-mail = { module = "com.sun.mail:android-mail", version.ref = "mail" }
+android-activation = { module = "com.sun.mail:android-activation", version.ref = "mail" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
