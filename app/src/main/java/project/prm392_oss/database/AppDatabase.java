@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-//import project.prm392_oss.dao.*;
+import project.prm392_oss.dao.*;
 import project.prm392_oss.entity.*;
 
 @Database(entities = {Category.class, Order.class, OrderDetails.class,
@@ -30,8 +30,8 @@ public abstract class AppDatabase extends RoomDatabase {
 //    public abstract FeedbackDAO feedbackDAO();
 //    public abstract OrderDAO orderDAO();
 //    public abstract OrderDetailsDAO orderDetailsDAO();
-//    public abstract RoleDAO roleDAO();
-//    public abstract UserDAO userDAO();
+    public abstract RoleDAO roleDAO();
+    public abstract UserDAO userDAO();
 //
 //    public abstract CartDAO cartDAO();
 //    public abstract CartItemDAO cartItemDAO();
