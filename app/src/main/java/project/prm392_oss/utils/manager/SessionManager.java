@@ -1,4 +1,4 @@
-package project.prm392_oss.ultisManager;
+package project.prm392_oss.utils.manager;
 
 import android.app.Activity;
 import android.content.Context;
