@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
 
 import project.prm392_oss.R;
-import project.prm392_oss.ultisManager.SessionManager;
+import project.prm392_oss.utils.manager.SessionManager;
 
 public class BaseActivity extends AppCompatActivity {
 

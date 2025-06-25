@@ -24,17 +24,17 @@ public abstract class AppDatabase extends RoomDatabase {
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
 //    // Khai báo DAO
-//    public abstract ProductDAO productDAO();
-//    public abstract SupplierDAO supplierDAO();
-//    public abstract CategoryDAO categoryDAO();
-//    public abstract FeedbackDAO feedbackDAO();
-//    public abstract OrderDAO orderDAO();
-//    public abstract OrderDetailsDAO orderDetailsDAO();
+    public abstract ProductDAO productDAO();
+    public abstract SupplierDAO supplierDAO();
+    public abstract CategoryDAO categoryDAO();
+    public abstract FeedbackDAO feedbackDAO();
+    public abstract OrderDAO orderDAO();
+    public abstract OrderDetailsDAO orderDetailsDAO();
     public abstract RoleDAO roleDAO();
     public abstract UserDAO userDAO();
-//
-//    public abstract CartDAO cartDAO();
-//    public abstract CartItemDAO cartItemDAO();
+
+    public abstract CartDAO cartDAO();
+    public abstract CartItemDAO cartItemDAO();
 
     // Singleton Database
     public static AppDatabase getInstance(Context context) {
