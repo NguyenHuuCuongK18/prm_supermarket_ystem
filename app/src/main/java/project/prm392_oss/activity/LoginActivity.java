@@ -13,10 +13,10 @@ import project.prm392_oss.activity.BaseActivity;
 
 import project.prm392_oss.R;
 import project.prm392_oss.repository.UserRepository;
-//import project.prm392_oss.activity.ListProductActivity;
-//import project.prm392_oss.activity.ListUsersActivity;
-//import project.prm392_oss.activity.ListOrdersActivity;
-//import project.prm392_oss.activity.WelcomeActivityCustomer;
+import project.prm392_oss.activity.ListProductActivity;
+import project.prm392_oss.activity.ListUsersActivity;
+import project.prm392_oss.activity.ListOrdersActivity;
+import project.prm392_oss.activity.WelcomeActivityCustomer;
 
 public class LoginActivity extends BaseActivity {
 
@@ -45,13 +45,13 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-//        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
 
         registerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,34 +71,34 @@ public class LoginActivity extends BaseActivity {
             return;
         }
 
-//        userRepository.loginUser(usernameOrEmail, password, user -> runOnUiThread(() -> {
-//            if (user != null) {
-//                userRepository.getRoleName(user.getRole_id(), roleName -> runOnUiThread(() -> {
-//                    SharedPreferences prefs = getSharedPreferences("USER_PREFS", MODE_PRIVATE);
-//                    prefs.edit()
-//                            .putString("USER_ROLE", roleName)
-//                            .putInt("USER_ID", user.getUser_id())
-//                            .apply();
-//
-//                    Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-//
-//                    Intent intent = null;
-//                    if ("Customer".equals(roleName)) {
-//                        intent = new Intent(LoginActivity.this, WelcomeActivityCustomer.class);
-//                    } else if ("Manager".equals(roleName)) {
-//                        intent = new Intent(LoginActivity.this, ListUsersActivity.class);
-//                    } else if ("Employee".equals(roleName)) {
-//                        intent = new Intent(LoginActivity.this, ListOrdersActivity.class);
-//                    }
-//                    if (intent != null) {
-//                        intent.putExtra("USER_ID", user.getUser_id());
-//                        startActivity(intent);
-//                        finish();
-//                    }
-//                }));
-//            } else {
-//                Toast.makeText(this, "Tên đăng nhập, email hoặc mật khẩu không đúng!", Toast.LENGTH_SHORT).show();
-//            }
-//        }));
+        userRepository.loginUser(usernameOrEmail, password, user -> runOnUiThread(() -> {
+            if (user != null) {
+                userRepository.getRoleName(user.getRole_id(), roleName -> runOnUiThread(() -> {
+                    SharedPreferences prefs = getSharedPreferences("USER_PREFS", MODE_PRIVATE);
+                    prefs.edit()
+                            .putString("USER_ROLE", roleName)
+                            .putInt("USER_ID", user.getUser_id())
+                            .apply();
+
+                    Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = null;
+                    if ("Customer".equals(roleName)) {
+                        intent = new Intent(LoginActivity.this, WelcomeActivityCustomer.class);
+                    } else if ("Manager".equals(roleName)) {
+                        intent = new Intent(LoginActivity.this, ListUsersActivity.class);
+                    } else if ("Employee".equals(roleName)) {
+                        intent = new Intent(LoginActivity.this, ListOrdersActivity.class);
+                    }
+                    if (intent != null) {
+                        intent.putExtra("USER_ID", user.getUser_id());
+                        startActivity(intent);
+                        finish();
+                    }
+                }));
+            } else {
+                Toast.makeText(this, "Tên đăng nhập, email hoặc mật khẩu không đúng!", Toast.LENGTH_SHORT).show();
+            }
+        }));
     }
 }
