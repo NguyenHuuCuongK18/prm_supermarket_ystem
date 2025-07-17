@@ -92,10 +92,10 @@ public class ListUsersActivity extends BaseActivity {
             public void onNothingSelected(AdapterView<?> parent) { }
         });
 
-//        createEmployeeButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(ListUsersActivity.this, AddEmployeeActivity.class);
-//            startActivity(intent);
-//        });
+        createEmployeeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ListUsersActivity.this, AddEmployeeActivity.class);
+            startActivity(intent);
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -105,10 +105,7 @@ public class ListUsersActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        if (item.getItemId() == android.R.id.home) {
-//            onBackPressed();
-//            return true;
-//        }
+
         if (item.getItemId() == R.id.nav_user_management) {
             startActivity(new Intent(ListUsersActivity.this, ListUsersActivity.class));
             return true;
