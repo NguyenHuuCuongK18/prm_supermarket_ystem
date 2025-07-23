@@ -6,8 +6,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class GMailSender {
-    private final String senderEmail = "cuongnhhe186494@fpt.edu.vn"; // Thay bằng email thật
-    private final String senderPassword = "vchn dvax yyrs dshj"; // Thay bằng App Password
+    private final String senderEmail = "quandhhe176224@fpt.edu.vn"; // Thay bằng email thật
+    private final String senderPassword = "rlab qyye lxvi udyf"; // Thay bằng App Password
 
     public void sendMail(String recipientEmail, String subject, String messageText) throws MessagingException {
         Properties props = new Properties();

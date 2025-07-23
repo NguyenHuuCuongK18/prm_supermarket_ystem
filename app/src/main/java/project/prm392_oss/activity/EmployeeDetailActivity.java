@@ -62,7 +62,7 @@ public class EmployeeDetailActivity extends BaseActivity {
                         }
                     });
 
-                    ivProfile.setImageResource(R.drawable.defaultimage);
+                        ivProfile.setImageResource(R.drawable.defaultimage);
                 }
             }
         });
