@@ -62,14 +62,14 @@
         android:text="Price"
         android:textSize="14sp" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btnView"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="37dp"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:gravity="center"-->
-    <!--        android:text="View"-->
-    <!--        tools:ignore="TouchTargetSizeCheck" />-->
+<!--    <Button-->
+<!--        android:id="@+id/btnView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="37dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="View"-->
+<!--        tools:ignore="TouchTargetSizeCheck" />-->
 
     <!-- Edit button -->
     <Button
