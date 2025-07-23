@@ -54,7 +54,9 @@ public class UpdateSupplierActivity extends BaseActivity {
                         String name = supplier_name_edt.getText().toString();
                         String phone = supplier_phone_edt.getText().toString();
                         String address = supplier_address_edt.getText().toString();
-                        supplierViewModel.update(new Supplier(name, phone, address));
+                        Supplier updatedSupplier = new Supplier(name, phone, address);
+                        updatedSupplier.setSupplier_id(s.getSupplier_id());
+                        supplierViewModel.update(updatedSupplier);
                         Toast.makeText(UpdateSupplierActivity.this, "Update successfully", Toast.LENGTH_SHORT).show();
                         finish();
                     }
