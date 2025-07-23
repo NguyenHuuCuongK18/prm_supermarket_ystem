@@ -20,7 +20,7 @@ import project.prm392_oss.R;
 import project.prm392_oss.adapter.CategoryAdapterCustomer;
 import project.prm392_oss.database.AppDatabase;
 import project.prm392_oss.entity.Cart;
-//import project.prm392_oss.activity.OrderHistoryActivityCustomer;
+import project.prm392_oss.activity.OrderHistoryActivityCustomer;
 import project.prm392_oss.utils.manager.SessionManager;
 
 public class WelcomeActivityCustomer extends BaseActivity {

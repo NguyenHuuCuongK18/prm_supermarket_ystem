@@ -15,7 +15,7 @@ import project.prm392_oss.entity.*;
 
 @Database(entities = {Category.class, Order.class, OrderDetails.class,
         Product.class, Role.class, Supplier.class, User.class, Cart.class, CartItem.class},
-        version = 3, exportSchema = false)
+        version = 4, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static volatile AppDatabase INSTANCE;

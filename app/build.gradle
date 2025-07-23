@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    alias(libs.plugins.android.application)
 }
 
 android {
@@ -12,27 +12,40 @@ android {
         targetSdk 35
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
-            )
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
+    // ✅ DSL mới cho AGP 8+
+    packaging {
+        resources {
+            // chỉ cần NOTICE.md, nhưng thêm luôn vài file hay trùng khác
+            excludes += [
+                    "META-INF/NOTICE.md",
+                    "META-INF/NOTICE",
+                    "META-INF/LICENSE.md",
+                    "META-INF/LICENSE",
+                    "META-INF/DEPENDENCIES",
+                    "META-INF/ASL2.0"
+            ]
+            // hoặc dùng pickFirst nếu muốn giữ một bản bất kỳ:
+            // pickFirsts += "META-INF/NOTICE.md"
+        }
+    }
 }
 
 dependencies {
-    // AndroidX core
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -49,7 +62,6 @@ dependencies {
     // Lifecycle
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
-    // implementation(libs.lifecycle.extensions) // chỉ bật nếu cần API cũ 2.2.0
 
     // Image loading
     implementation(libs.picasso)

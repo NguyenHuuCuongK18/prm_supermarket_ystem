@@ -42,6 +42,7 @@ public class ProductListOfEmployeeActivity extends BaseActivity {
         category_of_product_tv = findViewById(R.id.category_of_product_tv);
         list_products_lv = findViewById(R.id.list_products_lv);
 
+        //lay ra productname
         Intent intent = getIntent();
         String categoryId = intent.getStringExtra("category_id");
 
